@@ -87,13 +87,11 @@ The dashboard is 100% static and deploys instantly on any hosting provider.
 🔧 How to Run Locally
 
 Clone the repository:
-
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+git clone https://github.com/JeanCarlos14301/PROJECT_FYRONYX.git
 
 
 Enter the project directory:
-
-cd YOUR-REPO-NAME
+cd PROJECT_FYRONYX
 
 
 Open the index.html file in your browser:
@@ -123,7 +121,7 @@ Since this project is a static site, Vercel deploys it instantly.
 
 Your application will be live at:
 
-https://your-project-name.vercel.app
+https://project-fyronyx.vercel.app/
 
 🧪 Model Summary (Machine Learning)
 
