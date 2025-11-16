@@ -1,0 +1,353 @@
+  <!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Fyronyx</title>
+
+      <link rel="stylesheet" href="style.css" />
+      <link rel="icon" href="img/favicon.ico" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+
+    <body>
+      <!-- HEADER -->
+      <header class="header">
+        <div class="brand">
+          <img src="img/volador no identificado.png" alt="Fyronyx logo" />
+          <div class="brand-text">
+            <h1>Fyronyx</h1>
+            <div class="tagline">
+              Modelo de Análisis Predictivo Crediticio · Hackatón 2025 - 2
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h2>Riesgo Crediticio Basado en Datos</h2>
+              <p>
+                Modelo entrenado con +5.5M registros, depuración avanzada,
+                selección automática de variables y validación avanzada. AUC de
+                84%, un modelo explicable, eficiente y robusto.
+              </p>
+            </div>
+
+            <div class="hero-visual">
+              <img src="img/Graph.png" alt="gráfico" class="hero-image" />
+            </div>
+          </div>
+        </section>
+
+        <!-- GRID PRINCIPAL -->
+        <div class="grid">
+          <!-- RESUMEN DEL DATASET -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Resumen del Dataset</h3>
+            </div>
+
+            <div class="card-content">
+              <h6>&nbsp</h6>
+              <p class="small">
+                Raw dataset: 5.5M registros · 825 variables → Limpieza final: 2.8M
+                registros · 8 variables.
+              </p>
+              <h1>&nbsp</h1>
+              <div class="kpi">
+                <div class="kpi-item">
+                  <div class="value">+5.5M</div>
+                  <div class="label">Registros procesados</div>
+                </div>
+
+                <div class="kpi-item">
+                  <div class="value">2.8M</div>
+                  <div class="label">Registros finales</div>
+                </div>
+
+                <div class="kpi-item">
+                  <div class="value">8</div>
+                  <div class="label">Variables finales</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PERFORMANCE -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Performance del Modelo</h3>
+            </div>
+
+            <div class="card-content">
+              <p class="small">
+                AUC Validación: 0.84 · KS: 43 · Estabilidad confirmada vía
+                bootstrap.
+              </p>
+              <p>AUC Test: 0.84 (muy buen nivel de discriminación).</p>
+              <p>AUC Top ≈ 0.73 → prioriza correctamente clientes riesgosos.</p>
+
+              <div class="chart-container">
+                <div class="chart-placeholder">
+                  <div class="chart-title">Curva ROC</div>
+
+                  <div class="chart-visual">
+                    <div class="roc-line"></div>
+                    <div class="random-line"></div>
+                  </div>
+
+                  <div class="chart-legend">
+                    <div class="legend-item">
+                      <span class="legend-color roc"></span>
+                      <span>Modelo</span>
+                    </div>
+
+                    <div class="legend-item">
+                      <span class="legend-color random"></span>
+                      <span>Base Lineal</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VARIABLES CLAVE -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Variables más Predictivas</h3>
+            </div>
+
+            <div class="card-content">
+              <p class="small">Ranking basado en AUC univariante</p>
+              <h3>&nbsp</h3>
+              <div class="variables-list">
+                <div class="variable-item">
+                  <div class="variable-name">P_2</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 78%"></div>
+                  </div>
+                  <div class="variable-value">78%</div>
+                </div>
+
+                <div class="variable-item">
+                  <div class="variable-name">D_48</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 69%"></div>
+                  </div>
+                  <div class="variable-value">69%</div>
+                </div>
+
+                <div class="variable-item">
+                  <div class="variable-name">D_77</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 67%"></div>
+                  </div>
+                  <div class="variable-value">67%</div>
+                </div>
+
+                <div class="variable-item">
+                  <div class="variable-name">D_61</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 64%"></div>
+                  </div>
+                  <div class="variable-value">64%</div>
+                </div>
+
+                <div class="variable-item">
+                  <div class="variable-name">B_1</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 58%"></div>
+                  </div>
+                  <div class="variable-value">58%</div>
+                </div>
+
+                <div class="variable-item">
+                  <div class="variable-name">B_4</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 59%"></div>
+                  </div>
+                  <div class="variable-value">59%</div>
+                </div>
+
+                <div class="variable-item">
+                  <div class="variable-name">D_42</div>
+                  <div class="variable-bar">
+                    <div class="bar-fill" style="width: 59%"></div>
+                  </div>
+                  <div class="variable-value">58.9%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- METODOLOGÍA -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Metodología</h3>
+            </div>
+
+            <div class="card-content">
+              <ul class="small">
+                <h3>&nbsp</h3>
+                Depuración: de 825 variables → 185 relevantes → 8 finales
+                <h3>&nbsp</h3>
+                Evitar fugas de información (leakage): eliminación de variables
+                sospechosas.
+                <h3>&nbsp</h3>
+                Validación: bootstrap y regularización
+                <h3>&nbsp</h3>
+                Modelo explicable y sin colinealidad
+                <h3>&nbsp</h3>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SEGMENTACIÓN DE RIESGO -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Segmentación de Riesgo</h3>
+            </div>
+
+            <div class="card-content">
+              <ul class="small">
+                <h4>&nbsp</h4>
+                <li><b>Alto riesgo:</b> mora >80% → no otorgar crédito</li>
+                <h3>&nbsp</h3>
+                <li><b>Riesgo moderado:</b> 40–60% → crédito condicionado</li>
+                <h3>&nbsp</h3>
+                <li><b>Bajo riesgo:</b> &lt;30% → crédito aprobado</li>
+                <h3>&nbsp</h3>
+              </ul>
+
+              <div class="heatmap-placeholder">
+                <div class="heatmap-title">Rangos de Riesgo</div>
+
+                <div class="heatmap">
+                  <div class="heatmap-row">
+                    <div class="heatmap-cell low">Bajo</div>
+                    <div class="heatmap-cell med">Medio</div>
+                    <div class="heatmap-cell high">Alto</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACERCA DEL PROYECTO -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Acerca del Proyecto</h3>
+            </div>
+
+            <div class="card-content">
+              <h6>&nbsp</h6>
+              <p>
+                Proyecto desarrollado en la Hackatón 2025-2 en la Universidad
+                Santo Tomás.
+              </p>
+              <h3>&nbsp</h3>
+              <p>
+                Modelo construido con 5.5M registros, depuración, muestreo,
+                selección de variables y validación.
+              </p>
+              <h3>&nbsp</h3>
+              <p>
+                <b>AUC del 84%</b>, permitiendo distinguir clientes buenos vs
+                clientes de alto riesgo.
+              </p>
+            </div>
+          </div>
+
+          <!-- EJEMPLOS REALES -->
+          <div class="card card-wide">
+            <div class="card-header">
+              <h3>Muestra Real de Predicción</h3>
+            </div>
+
+            <div class="card-table">
+              <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Ingreso</th>
+                      <th>P_2</th>
+                      <th>D_42</th>
+                      <th>B_4</th>
+                      <th>Score</th>
+                      <th>Riesgo</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>1021</td>
+                      <td>$2.3M</td>
+                      <td>0.71</td>
+                      <td>0.16</td>
+                      <td>0.19</td>
+                      <td>82%</td>
+                      <td><span class="badge high">Alto</span></td>
+                    </tr>
+
+                    <tr>
+                      <td>3045</td>
+                      <td>$3.9M</td>
+                      <td>0.09</td>
+                      <td>0.02</td>
+                      <td>0.04</td>
+                      <td>14%</td>
+                      <td><span class="badge low">Bajo</span></td>
+                    </tr>
+
+                    <tr>
+                      <td>1988</td>
+                      <td>$1.7M</td>
+                      <td>0.41</td>
+                      <td>0.07</td>
+                      <td>0.12</td>
+                      <td>52%</td>
+                      <td><span class="badge med">Medio</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONCLUSIONES -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Conclusiones</h3>
+            </div>
+
+            <div class="card-content">
+              <h4>&nbsp</h4>
+              <p>
+                El modelo final es sólido y confiable. Con solo 8 variables logra
+                gran precisión.
+              </p>
+              <h3>&nbsp</h3>
+              <p>
+                Ideal para sistemas de scoring crediticio de alto rendimiento y
+                bajo costo computacional.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          Fyronyx · Hackatón 2025 - 2 · Innovación en análisis crediticio
+        </footer>
+      </main>
+    </body>
+  </html>
